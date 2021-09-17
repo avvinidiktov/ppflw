@@ -19,3 +19,9 @@ http://localhost:8080/api-docs
 #### H2 console:
 
 http://localhost:8081/h2
+
+#### Windows tips:
+ - For issue with connection to kafka container:
+    * add "127.0.0.1 kafka" to hosts file "C:\Windows\System32\drivers\etc\hosts"
+ - For issue with h2 console:
+    * add "spring.h2.console.settings.web-allow-others=true" to application.properties file

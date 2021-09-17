@@ -20,7 +20,7 @@ http://localhost:8080/api-docs
 
 http://localhost:8081/h2
 
-#### Windows tips:
+#### Usef tips:
  - For issue with connection to kafka container:
     * add "127.0.0.1 kafka" to hosts file "C:\Windows\System32\drivers\etc\hosts"
  - For issue with h2 console:

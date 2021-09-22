@@ -1,6 +1,6 @@
 package com.itechartgroup.avvinidiktov.PeopleFlow.kafka.controller;
 
-import com.itechartgroup.avvinidiktov.PeopleFlow.kafka.producer.EmployeeProducer;
+import com.itechartgroup.avvinidiktov.PeopleFlow.kafka.producer.impl.EmployeeProducer;
 import com.itechartgroup.avvinidiktov.PeopleFlow.model.dto.EmployeeDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

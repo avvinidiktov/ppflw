@@ -1,6 +1,7 @@
-package com.itechartgroup.avvinidiktov.PeopleFlow.kafka.consumer;
+package com.itechartgroup.avvinidiktov.PeopleFlow.kafka.consumer.impl;
 
 
+import com.itechartgroup.avvinidiktov.PeopleFlow.kafka.consumer.AbstractConsumer;
 import com.itechartgroup.avvinidiktov.PeopleFlow.model.dto.EmployeeDTO;
 import com.itechartgroup.avvinidiktov.PeopleFlow.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,7 @@ import java.util.Optional;
 @Slf4j
 @Service
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class EmployeeConsumer {
+public class EmployeeConsumer implements AbstractConsumer<EmployeeDTO, EmployeeDTO> {
 
     private final EmployeeService employeeService;
 

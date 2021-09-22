@@ -1,5 +1,6 @@
-package com.itechartgroup.avvinidiktov.PeopleFlow.kafka.producer;
+package com.itechartgroup.avvinidiktov.PeopleFlow.kafka.producer.impl;
 
+import com.itechartgroup.avvinidiktov.PeopleFlow.kafka.producer.AbstractProducer;
 import com.itechartgroup.avvinidiktov.PeopleFlow.model.dto.ChangeStateReq;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,14 +17,14 @@ import java.util.concurrent.ExecutionException;
 @Slf4j
 @Component
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
-public class EmployeeStateProducer {
+public class EmployeeStateProducer implements AbstractProducer<ChangeStateReq, Boolean> {
     private final ReplyingKafkaTemplate<String, ChangeStateReq, Boolean> requestReplyKafkaTemplate;
 
     @Value("${kafka.req.topic.state}")
     private String REQ_TOPIC_SET;
 
 
-    public Boolean sendEvent(ChangeStateReq req) throws ExecutionException, InterruptedException {
+    public Boolean sendMessage(ChangeStateReq req) throws ExecutionException, InterruptedException {
         log.info("#### -> Producing event -> {} for employee id={}", req.getEvent(), req.getEmployeeId());
 
         ProducerRecord<String, ChangeStateReq> record = new ProducerRecord<>(REQ_TOPIC_SET, null, String.valueOf(req.getEmployeeId()), req);

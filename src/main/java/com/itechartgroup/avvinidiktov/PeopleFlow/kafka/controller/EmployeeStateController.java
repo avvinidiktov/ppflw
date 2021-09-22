@@ -1,7 +1,7 @@
 package com.itechartgroup.avvinidiktov.PeopleFlow.kafka.controller;
 
 
-import com.itechartgroup.avvinidiktov.PeopleFlow.kafka.producer.EmployeeStateProducer;
+import com.itechartgroup.avvinidiktov.PeopleFlow.kafka.producer.impl.EmployeeStateProducer;
 import com.itechartgroup.avvinidiktov.PeopleFlow.model.dto.ChangeStateReq;
 import com.itechartgroup.avvinidiktov.PeopleFlow.service.EmployeeStateService;
 import com.itechartgroup.avvinidiktov.PeopleFlow.statemachine.state.EmployeeState;
@@ -39,7 +39,7 @@ public class EmployeeStateController {
             @ApiResponse(responseCode = "400", description = "Not Accepted")})
     @PostMapping("{employeeId}")
     public ResponseEntity<String> setState(@RequestBody ChangeStateReq req) throws ExecutionException, InterruptedException {
-        return stateProducer.sendEvent(req)
+        return stateProducer.sendMessage(req)
                 ? ResponseEntity.ok(req.getEvent().name())
                 : ResponseEntity.badRequest().body("Not Accepted");
     }

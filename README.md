@@ -10,7 +10,7 @@
 >
 >docker-compose build
 >
->docker-compose up -d
+>**docker-compose up -d** or **docker-compose up** to see container's logs
 
 #### API docs:
 

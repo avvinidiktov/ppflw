@@ -1,8 +1,8 @@
-package com.itechartgroup.avvinidiktov.kafka.controller;
+package com.itechartgroup.avvinidiktov.controller;
 
 import com.itechartgroup.avvinidiktov.core.model.EmployeeDTO;
-import com.itechartgroup.avvinidiktov.kafka.producer.impl.EmployeeProducer;
-import com.itechartgroup.avvinidiktov.kafka.util.TestUtils;
+import com.itechartgroup.avvinidiktov.producer.impl.EmployeeProducer;
+import com.itechartgroup.avvinidiktov.util.TestUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

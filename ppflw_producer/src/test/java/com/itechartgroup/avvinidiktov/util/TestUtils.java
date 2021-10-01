@@ -1,4 +1,4 @@
-package com.itechartgroup.avvinidiktov.kafka.util;
+package com.itechartgroup.avvinidiktov.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

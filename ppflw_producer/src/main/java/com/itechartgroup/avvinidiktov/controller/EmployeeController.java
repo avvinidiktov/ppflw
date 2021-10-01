@@ -1,7 +1,7 @@
-package com.itechartgroup.avvinidiktov.kafka.controller;
+package com.itechartgroup.avvinidiktov.controller;
 
 import com.itechartgroup.avvinidiktov.core.model.EmployeeDTO;
-import com.itechartgroup.avvinidiktov.kafka.producer.impl.EmployeeProducer;
+import com.itechartgroup.avvinidiktov.producer.impl.EmployeeProducer;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -24,7 +24,7 @@ import java.util.concurrent.TimeoutException;
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class EmployeeController {
 
-    private final EmployeeProducer kafkaProducer;
+    private final EmployeeProducer producer;
 
     @Operation(summary = "Add new employee")
     @ApiResponses(value = {
@@ -35,7 +35,7 @@ public class EmployeeController {
                     content = @Content),})
     @PostMapping("employee")
     public ResponseEntity<EmployeeDTO> add(@RequestBody EmployeeDTO employeeDTO) throws InterruptedException, ExecutionException, TimeoutException {
-        return kafkaProducer.sendMessage(employeeDTO)
+        return producer.sendMessage(employeeDTO)
                 .map(value -> new ResponseEntity<>(value, HttpStatus.CREATED))
                 .orElseGet(() -> ResponseEntity.badRequest().build());
     }

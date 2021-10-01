@@ -1,20 +1,16 @@
-package com.itechartgroup.avvinidiktov.kafka.producer.impl;
+package com.itechartgroup.avvinidiktov.producer.impl;
 
 import com.itechartgroup.avvinidiktov.core.model.ChangeStateReq;
-import com.itechartgroup.avvinidiktov.core.model.EmployeeDTO;
-import com.itechartgroup.avvinidiktov.kafka.producer.AbstractProducer;
+import com.itechartgroup.avvinidiktov.producer.AbstractProducer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.requestreply.ReplyingKafkaTemplate;
 import org.springframework.kafka.requestreply.RequestReplyFuture;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;

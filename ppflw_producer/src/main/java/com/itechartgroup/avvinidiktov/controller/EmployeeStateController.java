@@ -1,8 +1,8 @@
-package com.itechartgroup.avvinidiktov.kafka.controller;
+package com.itechartgroup.avvinidiktov.controller;
 
 
 import com.itechartgroup.avvinidiktov.core.model.ChangeStateReq;
-import com.itechartgroup.avvinidiktov.kafka.producer.impl.EmployeeStateProducer;
+import com.itechartgroup.avvinidiktov.producer.impl.EmployeeStateProducer;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;

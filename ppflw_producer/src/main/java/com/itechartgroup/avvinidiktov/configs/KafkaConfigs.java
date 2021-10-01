@@ -1,4 +1,4 @@
-package com.itechartgroup.avvinidiktov.kafka.configs;
+package com.itechartgroup.avvinidiktov.configs;
 
 import com.itechartgroup.avvinidiktov.core.model.ChangeStateReq;
 import com.itechartgroup.avvinidiktov.core.model.EmployeeDTO;

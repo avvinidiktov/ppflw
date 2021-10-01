@@ -1,4 +1,4 @@
-package com.itechartgroup.avvinidiktov.kafka.producer;
+package com.itechartgroup.avvinidiktov.producer;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;

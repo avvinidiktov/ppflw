@@ -22,10 +22,10 @@
     <description>Demo project for PeopleFlow</description>
 
     <properties>
-        <testcontainers.version>1.15.1</testcontainers.version>
+        <testcontainers.version>1.16.0</testcontainers.version>
         <java.version>11</java.version>
         <spring-doc.version>1.5.2</spring-doc.version>
-        <spring-kafka.version>2.7.2</spring-kafka.version>
+        <spring-kafka.version>2.7.6</spring-kafka.version>
     </properties>
 
     <dependencies>
